@@ -1,0 +1,14 @@
+{"timestamp":"2026-01-01T10:00:00.000Z","type":"session_meta","payload":{"id":"aabbccdd-0000-0000-0000-000000000001","timestamp":"2026-01-01T09:00:00.000Z","cwd":"C:\\Users\\test\\project","originator":"codex_cli_rs","cli_version":"0.106.0","source":"cli","model_provider":"openai","base_instructions":{"text":"You are Codex."}}}
+{"timestamp":"2026-01-01T10:00:01.000Z","type":"response_item","payload":{"type":"message","role":"developer","content":[{"type":"input_text","text":"<permissions>sandbox</permissions>"}]}}
+{"timestamp":"2026-01-01T10:00:02.000Z","type":"response_item","payload":{"type":"message","role":"user","content":[{"type":"input_text","text":"Fix the bug in app.py"}]}}
+{"timestamp":"2026-01-01T10:00:03.000Z","type":"event_msg","payload":{"type":"user_message"}}
+{"timestamp":"2026-01-01T10:00:04.000Z","type":"turn_context","payload":{"turn_id":"aabbccdd-1111-0000-0000-000000000001","cwd":"C:\\Users\\test\\project","approval_policy":"on-request","sandbox_policy":{"type":"workspace-write","network_access":false},"model":"gpt-5.1-codex-mini","collaboration_mode":{"mode":"default","settings":{"model":"gpt-5.1-codex-mini"}}}}
+{"timestamp":"2026-01-01T10:00:05.000Z","type":"response_item","payload":{"type":"reasoning","summary":[{"type":"summary_text","text":"Analyzing the bug"}],"content":null,"encrypted_content":"ENCRYPTEDDATA123"}}
+{"timestamp":"2026-01-01T10:00:06.000Z","type":"response_item","payload":{"type":"function_call","call_id":"call_abc001","name":"shell_command","arguments":"{\"command\":\"cat app.py\"}"}}
+{"timestamp":"2026-01-01T10:00:07.000Z","type":"response_item","payload":{"type":"function_call_output","call_id":"call_abc001","output":"def add(a,b):\n    return a - b  # bug here"}}
+{"timestamp":"2026-01-01T10:00:08.000Z","type":"turn_context","payload":{"turn_id":"aabbccdd-2222-0000-0000-000000000001","cwd":"C:\\Users\\test\\project","approval_policy":"on-request","sandbox_policy":{"type":"workspace-write","network_access":false},"model":"gpt-5.1-codex-mini","collaboration_mode":{"mode":"default"}}}
+{"timestamp":"2026-01-01T10:00:09.000Z","type":"response_item","payload":{"type":"custom_tool_call","status":"completed","call_id":"call_custom001","name":"apply_patch","input":"*** Begin Patch\n*** Update File: app.py\n@@\n-    return a - b\n+    return a + b\n*** End Patch"}}
+{"timestamp":"2026-01-01T10:00:10.000Z","type":"response_item","payload":{"type":"custom_tool_call_output","call_id":"call_custom001","output":"{\"output\":\"Success\",\"metadata\":{\"exit_code\":0}}"}}
+{"timestamp":"2026-01-01T10:00:11.000Z","type":"response_item","payload":{"type":"message","role":"assistant","content":[{"type":"output_text","text":"Fixed the bug. The function now returns a + b instead of a - b."}]}}
+{"timestamp":"2026-01-01T10:00:12.000Z","type":"event_msg","payload":{"type":"task_complete"}}
+{"timestamp":"2026-01-01T10:00:13.000Z","type":"response_item","payload":{"type":"web_search_call"}}

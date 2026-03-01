@@ -1,0 +1,23 @@
+{
+  "name": "openant",
+  "version": "1.0.0",
+  "description": "Bidirectional session bridge between Claude Code CLI and OpenAI Codex CLI",
+  "main": "src/cli.js",
+  "bin": {
+    "openant": "src/cli.js"
+  },
+  "scripts": {
+    "start": "node src/cli.js"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "better-sqlite3": "^11.5.0"
+  },
+  "optionalDependencies": {
+    "@anthropic-ai/sdk": "^0.32.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT"
+}
